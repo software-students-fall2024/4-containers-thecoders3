@@ -2,12 +2,12 @@
 This module contains unit tests for ml-client.
 """
 
+import io
 from unittest.mock import MagicMock, patch
 from pathlib import Path
-from io import BytesIO
 import pytest
 import speech_recognition as sr
-import io
+
 
 # from flask import Flask
 from app import app
