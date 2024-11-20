@@ -26,7 +26,7 @@ docker-compose up --build
 
 4. View the app in your browser: 
 
-open a web browser and go to http://127.0.0.1:5001
+open a web browser and go to [link](http://127.0.0.1:5001)
 
 ## Steps to run the test for machine-learning-client
 
