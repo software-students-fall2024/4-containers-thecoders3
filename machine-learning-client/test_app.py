@@ -6,9 +6,10 @@ import io
 from unittest.mock import MagicMock, patch
 from pathlib import Path
 import pytest
+
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 import speech_recognition as sr
-
-
 # from flask import Flask
 from app import app
 
