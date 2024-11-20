@@ -37,17 +37,22 @@ def test_transcribe_success(
     class MockAudioFile:
         """Mock class for AudioFile."""
 
-        pass
-
     class MockRecognizer:
-        def recognize_google(self, audio):
+        """Mock class to simulate the behavior of sr.Recognizer."""
+
+        def recognize_google(self, audio):  # pylint: disable=unused-argument
+            """Simulate recording audio from a source."""
             return "Test transcription"
 
-        def record(self, source):
+        def record(self, source):  # pylint: disable=unused-argument
+            """Simulate recognizing audio using Google API."""
             return MockAudioFile()  # Simulate recording audio
 
     class MockCollections:
-        def insert_one(self, data):
+        """Mock class to simulate a MongoDB collection."""
+
+        def insert_one(self, data):  # pylint: disable=unused-argument
+            """Simulate inserting data into a collection."""
             return type("MockResult", (), {"inserted_id": "mock_id"})()
 
     monkeypatch.setattr("app.sr.Recognizer", MockRecognizer)
@@ -79,13 +84,15 @@ def test_transcribe_request_error(
     class MockAudioFile:
         """Mock class for AudioFile."""
 
-        pass
-
     class MockRecognizer:
-        def record(self, source):
+        """Mock class to simulate the behavior of sr.Recognizer."""
+
+        def record(self, source):  # pylint: disable=unused-argument
+            """Simulate recording audio from a source."""
             return MockAudioFile()  # Simulate recording audio
 
-        def recognize_google(self, audio):
+        def recognize_google(self, audio):  # pylint: disable=unused-argument
+            """Simulate recognizing audio using Google API."""
             raise sr.RequestError("Mock error")
 
     monkeypatch.setattr("app.sr.Recognizer", MockRecognizer)
@@ -116,13 +123,15 @@ def test_transcribe_unknown_value_error(
     class MockAudioFile:
         """Mock class for AudioFile."""
 
-        pass
-
     class MockRecognizer:
-        def record(self, source):
+        """Mock class to simulate the behavior of sr.Recognizer."""
+
+        def record(self, source):  # pylint: disable=unused-argument
+            """Simulate recording audio from a source."""
             return MockAudioFile()  # Simulate recording audio
 
-        def recognize_google(self, audio):
+        def recognize_google(self, audio):  # pylint: disable=unused-argument
+            """Simulate recognizing audio using Google API."""
             raise sr.UnknownValueError()
 
     monkeypatch.setattr("app.sr.Recognizer", MockRecognizer)
