@@ -2,12 +2,18 @@
 This module contains unit tests for ml-client.
 """
 
+# pylint: disable=wrong-import-position
+# pylint: disable=wrong-import-order
 import io
+import warnings
 from pathlib import Path
-import pytest
+
 import speech_recognition as sr
 
 from app import app
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+import pytest
 
 
 @pytest.fixture
