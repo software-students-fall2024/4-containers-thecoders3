@@ -2,10 +2,6 @@
 ![ML-Client build & test](https://github.com/software-students-fall2024/4-containers-thecoders3/actions/workflows/build.yaml/badge.svg)
 ![Web-App build & test](https://github.com/software-students-fall2024/4-containers-thecoders3/actions/workflows/web-app.yaml/badge.svg)
 
-# Containerized App Exercise
-
-Build a containerized app that uses machine learning. See [instructions](./instructions.md) for details.
-
 ## Team members
 
 * Wilson Xu [Profile](https://github.com/wilsonxu101)
@@ -15,4 +11,5 @@ Build a containerized app that uses machine learning. See [instructions](./instr
 
 ## Description
 
-This project is a web-based application that converts user speech into text. Users can speak into their device's microphone, and the application processes the audio to display the corresponding text on the web interface.
+This project is a web-based application that converts user speech into text. Users can speak into their device's microphone, and the application processes the audio to display the corresponding text on the web interface. Additionally, users can edit the text and copy it elsewhere if desired.
+
