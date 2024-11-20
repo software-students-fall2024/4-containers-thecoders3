@@ -15,6 +15,7 @@ typing-extensions = "*"
 dill = "*"
 pymongo = "*"
 pytest = "*"
+coverage = "*"
 
 [dev-packages]
 

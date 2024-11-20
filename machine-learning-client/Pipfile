@@ -16,9 +16,9 @@ flask-cors = "*"
 pytest = "*"
 pytest-mock = "*"
 pytest-flask = "*"
+coverage = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.11"
-
