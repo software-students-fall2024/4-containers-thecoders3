@@ -34,7 +34,7 @@ def test_transcribe_success(
 ):  # pylint: disable=redefined-outer-name
     """Test the /transcribe endpoint with a successful transcription."""
 
-    class MockAudioFile:
+    class MockAudioFile:  # pylint: disable=too-few-public-methods
         """Mock class for AudioFile."""
 
     class MockRecognizer:
@@ -48,7 +48,7 @@ def test_transcribe_success(
             """Simulate recognizing audio using Google API."""
             return MockAudioFile()  # Simulate recording audio
 
-    class MockCollections:
+    class MockCollections:  # pylint: disable=too-few-public-methods
         """Mock class to simulate a MongoDB collection."""
 
         def insert_one(self, data):  # pylint: disable=unused-argument
@@ -81,7 +81,7 @@ def test_transcribe_request_error(
 ):  # pylint: disable=redefined-outer-name
     """Test the /transcribe endpoint with a request error from the recognizer."""
 
-    class MockAudioFile:
+    class MockAudioFile:  # pylint: disable=too-few-public-methods
         """Mock class for AudioFile."""
 
     class MockRecognizer:
@@ -120,7 +120,7 @@ def test_transcribe_unknown_value_error(
 ):  # pylint: disable=redefined-outer-name
     """Test the /transcribe endpoint with an unrecognizable audio file."""
 
-    class MockAudioFile:
+    class MockAudioFile:  # pylint: disable=too-few-public-methods
         """Mock class for AudioFile."""
 
     class MockRecognizer:
