@@ -1,6 +1,7 @@
 """
 This module contains unit tests for ml-client.
 """
+
 # pylint: disable=wrong-import-position
 # pylint: disable=wrong-import-order
 import io
